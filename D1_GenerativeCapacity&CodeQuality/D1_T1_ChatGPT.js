@@ -1,5 +1,6 @@
 // Write a debounce function in JavaScript
 
+
 function debounce(func, delay) {
     let timeoutId;
 
