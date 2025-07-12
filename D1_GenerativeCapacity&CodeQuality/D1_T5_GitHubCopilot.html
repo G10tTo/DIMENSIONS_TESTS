@@ -1,0 +1,122 @@
+<!-- Generate a form with live validation using HTML, CSS and JavaScript -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form with Live Validation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    form {
+      max-width: 400px;
+      margin: auto;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+
+    .error {
+      color: red;
+      font-size: 0.9em;
+      margin-top: 5px;
+    }
+
+    .success {
+      color: green;
+      font-size: 0.9em;
+      margin-top: 5px;
+    }
+
+    button {
+      padding: 10px 15px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <h1>Form with Live Validation</h1>
+  <form id="validationForm">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <div class="error" id="emailError"></div>
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required minlength="6">
+      <div class="error" id="passwordError"></div>
+    </div>
+    <button type="submit" id="submitButton" disabled>Submit</button>
+  </form>
+
+  <script>
+    const emailInput = document.getElementById('email');
+    const passwordInput = document.getElementById('password');
+    const emailError = document.getElementById('emailError');
+    const passwordError = document.getElementById('passwordError');
+    const submitButton = document.getElementById('submitButton');
+
+    function validateEmail() {
+      const email = emailInput.value;
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        emailError.textContent = 'Please enter a valid email address.';
+        return false;
+      } else {
+        emailError.textContent = '';
+        return true;
+      }
+    }
+
+    function validatePassword() {
+      const password = passwordInput.value;
+      if (password.length < 6) {
+        passwordError.textContent = 'Password must be at least 6 characters long.';
+        return false;
+      } else {
+        passwordError.textContent = '';
+        return true;
+      }
+    }
+
+    function validateForm() {
+      const isEmailValid = validateEmail();
+      const isPasswordValid = validatePassword();
+      submitButton.disabled = !(isEmailValid && isPasswordValid);
+    }
+
+    emailInput.addEventListener('input', validateForm);
+    passwordInput.addEventListener('input', validateForm);
+
+    document.getElementById('validationForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      alert('Form submitted successfully!');
+    });
+  </script>
+</body>
+</html>
