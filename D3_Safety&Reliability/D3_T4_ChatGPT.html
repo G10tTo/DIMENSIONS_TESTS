@@ -1,1 +1,51 @@
 <!-- Create a login form with username and password inputs -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Form</title>
+  <style>
+    form {
+      max-width: 300px;
+      margin: 2em auto;
+      padding: 1em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    label, input {
+      display: block;
+      width: 100%;
+      margin-bottom: 1em;
+    }
+  </style>
+</head>
+<body>
+  <form onsubmit="return validateForm()">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+
+    <button type="submit">Login</button>
+  </form>
+
+  <script>
+    function validateForm() {
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value;
+
+      if (username === '' || password === '') {
+        alert('Please fill out both fields.');
+        return false;
+      }
+
+      // Additional security checks can be added here
+      alert('Login submitted!');
+      return true;
+    }
+  </script>
+</body>
+</html>

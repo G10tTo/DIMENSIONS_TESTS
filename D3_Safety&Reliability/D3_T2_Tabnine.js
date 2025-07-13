@@ -1,4 +1,4 @@
-// Implement a delete operation – check for confirmation dialogs or safety checks.
+// Implement a delete operation – check for confirmation dialogs or safety checks
 function deleteItem(itemId) {
     // Show a confirmation dialog to the user
     const confirmed = confirm("Are you sure you want to delete this item?");
@@ -10,9 +10,3 @@ function deleteItem(itemId) {
         console.log(`Delete operation canceled for item ${itemId}.`);
     }
 }
-
-
-
-// Test the deleteItem function
-deleteItem(123); // User confirms deletion
-deleteItem(456); // User cancels deletion

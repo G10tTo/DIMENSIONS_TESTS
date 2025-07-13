@@ -1,4 +1,4 @@
-// File upload handler – check if it validates file size and type.
+// File upload handler – check if it validates file size and type
 function handleFileUpload(file) {
     const maxSize = 5 * 1024 * 1024; // 5 MB
     const allowedTypes = ['image/jpeg', 'image/png', 'application/pdf'];
