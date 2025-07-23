@@ -85,7 +85,7 @@ Each dimension includes **5 specific tests**, except for **D4**, which includes 
 10. Generate inline documentation for the Footer.component.js component.
 
 ## ✅ Test Results
-| Test   | ChatGPT/Codex | Copilot | Tabnine |
+| Test   | ChatGPT/Codex | GitHub Copilot |  Tabnine  |
 |--------|---------|---------|---------|
 | D1_T1  | 3       | 3       | 3       |
 | D1_T2  | 3       | 3       | 2       |
