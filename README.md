@@ -38,8 +38,8 @@ The tools tested are:
 Each dimension includes **5 specific tests**, except for **D4**, which includes **10 practical tests** derived from real issues and enhancements during the game’s development.
 
 - Each test is scored on a **1–5 scale**, where:
-  - **5** = Excellent performance  
-  - **1** = Failure or unusable output
+  - **3** = Excellent performance  
+  - **0** = Failure or unusable output
 - The raw scores are then **normalized into percentages** for cross-tool comparison.
 - Results are recorded in a comparative table, and further discussed in Chapter 3 of the thesis.
 
@@ -73,14 +73,13 @@ Each dimension includes **5 specific tests**, except for **D4**, which includes 
 5. Generate an input mask function for credit card data.
 
 ### D4 – Real-World Project: *Word Battle* Game
-1. Reduce the size of the `letterButtons`, `circleContainer`, and internal UI components  
-   *(responsive below 535px width – `letterButtons.module.css`, `Game.module.css`).*
-2. Add a "Restart Game" button that resets all relevant state.
-3. Generate inline documentation for the `App` component.
-4. Improve accessibility by making the letter buttons keyboard-navigable.
-5. Generate a loading spinner to display in AI’s turn (RED) and in Player’s turn (GREEN).
-6. Refactor the rounds history component to display a scrollable table when there are more than 10 elements.
-7. Write a unit test for the AI's word generation function.
-8. Implement a function that validates if a word is at least 4 letters long and a noun.
-9. Refactor the scoring logic to make it reusable across components.
-10. Add a dark mode toggle that updates the theme dynamically and persists the user’s choice using `localStorage`.
+1. Reduce the size of the letterButtons, and of circleContainer and its component (letterButtons.module.css , Game.module.css) in order to make it responsive for smaller devices with width smaller than 535px.
+2. Move Scores component out of circle container if the width of the screen is smaller than 535px.
+3. Improve accessibility by making the letter buttons keyboard-navigable.
+4. Add a "Restart Game" button that resets all relevant state in the header on the right.
+5. Change color to .circleContainer {box-shadow: 0 0 15px rgb(0, 91, 203);} based on the turn: AI’s turn RED and in Player’s turn GREEN.
+6. Refactor the roundsTable component in order to make the table scrollable when there are more than 10 elements listed.
+7. Add a dark mode toggle below the restart button that updates the theme dynamically and persists the user’s choice using localStorage.
+8. Refactor the scoring logic to make it reusable across components.
+9. Write a unit test for the AI's word generation function.
+10. Generate inline documentation for the Footer.component.js component.
