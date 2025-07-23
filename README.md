@@ -83,3 +83,32 @@ Each dimension includes **5 specific tests**, except for **D4**, which includes 
 8. Refactor the scoring logic to make it reusable across components.
 9. Write a unit test for the AI's word generation function.
 10. Generate inline documentation for the Footer.component.js component.
+
+## ✅ Test Results
+| Test   | ChatGPT/Codex | Copilot | Tabnine |
+|--------|---------|---------|---------|
+| D1_T1  | 3       | 3       | 3       |
+| D1_T2  | 3       | 3       | 2       |
+| D1_T3  | 3       | 3       | 2       |
+| D1_T4  | 3       | 2       | 2       |
+| D1_T5  | 3       | 3       | 3       |
+| D2_T1  | 3       | 2       | 3       |
+| D2_T2  | 0       | 0       | 0       |
+| D2_T3  | 2       | 1       | 1       |
+| D2_T4  | 2       | 2       | 1       |
+| D2_T5  | 3       | 3       | 3       |
+| D3_T1  | 3       | 2       | 3       |
+| D3_T2  | 3       | 2       | 2       |
+| D3_T3  | 3       | 3       | 3       |
+| D3_T4  | 3       | 1       | 3       |
+| D3_T5  | 3       | 2       | 3       |
+| D4_T1  | 3       | 2       | 1       |
+| D4_T2  | 3       | 3       | 1       |
+| D4_T3  | 3       | 1       | 1       |
+| D4_T4  | 3       | 1       | 2       |
+| D4_T5  | 3       | 2       | 1       |
+| D4_T6  | 3       | 3       | 3       |
+| D4_T7  | 2       | 0       | 0       |
+| D4_T8  | 3       | 2       | 3       |
+| D4_T9  | 1       | 1       | 2       |
+| D4_T10 | 2       | 2       | 3       |
