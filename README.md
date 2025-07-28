@@ -110,5 +110,5 @@ Each dimension includes **5 specific tests**, except for **D4**, which includes 
 | D4_T6  | 3       | 3       | 3       |
 | D4_T7  | 2       | 0       | 0       |
 | D4_T8  | 3       | 2       | 3       |
-| D4_T9  | 1       | 1       | 2       |
-| D4_T10 | 2       | 2       | 3       |
+| D4_T9  | 1       | 1       | 1       |
+| D4_T10 | 1       | 2       | 3       |
